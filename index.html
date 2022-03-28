@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/play.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/rank.css">
+</head>
+
+<body style="font-size: 16px;">
+    <div class="main area">
+        <div id="start" class="start main" style="display: '';">
+            <div class="image">
+                <img src="sound/logo.png" height="90" alt="">
+                <img src="sound/Asset2.png" height="80" alt="">
+                <img src="sound/Asset3.png" height="80" alt="">
+                <img src="sound/Asset6.png" height="80" alt="">
+                <img src="sound/Asset8.png" height="80" alt="">
+            </div>
+
+            <input id="playername" type="text" placeholder="Player Name">
+
+            <div class="group area">
+                <div onclick="changeLevel('EASY')" class="btn radio "><span>EASY</span></div>
+                <div onclick="changeLevel('NORMAL')" class="btn radio active"><span>NORMAL</span></div>
+                <div onclick="changeLevel('HARD')" class="btn radio "><span>HARD</span></div>
+            </div>
+
+            <div class="group area">
+                <div onclick="startTest(0)" class="btn"><span>TUTORIAL</span></div>
+                <div id="startGame" onclick="startGame()" class="btn"><span>START GAME</span></div>
+            </div>
+
+            <div class="area group">
+                <div onclick="changeSize(-1)" class="btn"><span>A-</span></div>
+                <div onclick="changeSize(+1)" class="btn"><span>A+</span></div>
+            </div>
+        </div>
+
+        <div id="play" class="play main" style="display: none;">
+            <div class="information area">
+                <span id="topScore">TOP SCORE： 0</span>
+                <span id="score">SCORE： 0</span>
+
+                <img src="sound/logo.png" height="30" alt="">
+
+                <span id="time">TIME： 00:00</span>
+                <span id="name">user</span>
+
+                <div id="lives" class="lives area">
+                    <span>LIVES</span>
+                    <img src="sound/Asset8.png" height="30" alt="">
+                    <img src="sound/Asset8.png" height="30" alt="">
+                    <img src="sound/Asset8.png" height="30" alt="">
+                </div>
+            </div>
+
+            <canvas id="mycanvas" width="700" height="800"></canvas>
+
+            <div class="controller area">
+                <div class="direction">
+                    <div id="up" class="btn"><span>↑</span></div>
+                    <div id="down" class="btn"><span>↓</span></div>
+                    <div id="left" class="btn"><span>←</span></div>
+                    <div id="right" class="btn"><span>→</span></div>
+                </div>
+
+                <div class="group area left">
+                    <div id="pause" onclick="pause()" class="btn"><span>暫停</span></div>
+                    <span id="level"></span>
+                    <div onclick="restart()" class="btn"><span>重啟</span></div>
+                </div>
+
+                <div id="exit" class="group area exit" style="display: '';">
+                    <div onclick="endTest()" class="btn"><span>退出教學</span></div>
+                </div>
+
+                <div class="group area right">
+                    <div onclick="changeSize(-1)" class="btn"><span>A-</span></div>
+                    <div onclick="changeSize(+1)" class="btn"><span>A+</span></div>
+                </div>
+
+                <div class="extra">
+                    <div id="space" class="btn"><span>空白鍵</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="test" class="test" style="display: none;">
+            <img id="t1" onclick="startTest(1)" src="sound/test1.png" height="900" style="display: '';" alt="">
+            <img id="t2" onclick="startTest(2)" src="sound/test2.png" height="900" style="display: none;" alt="">
+        </div>
+
+        <div id="rank" class="rank start main" style="display: none;">
+            <div class="image">
+                <img src="sound/logo2.png" height="90" alt="">
+                <img src="sound/Asset2.png" height="80" alt="">
+                <img src="sound/Asset3.png" height="80" alt="">
+                <img src="sound/Asset6.png" height="80" alt="">
+                <img src="sound/Asset8.png" height="80" alt="">
+            </div>
+
+            <div class="list">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Rank</td>
+                            <td>Level</td>
+                            <td>Name</td>
+                            <td>Time</td>
+                            <td>Score</td>
+                        </tr>
+                    </thead>
+                    <tbody id="rankBody"></tbody>
+                </table>
+            </div>
+
+            <div class="group area">
+                <div onclick="changeLevel('EASY')" class="btn radio "><span>EASY</span></div>
+                <div onclick="changeLevel('NORMAL')" class="btn radio active"><span>NORMAL</span></div>
+                <div onclick="changeLevel('HARD')" class="btn radio "><span>HARD</span></div>
+            </div>
+
+            <div class="group area">
+                <div onclick="restart()" class="btn"><span>RESTART GAME</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/compoent.js" defer></script>
+    <script src="js/elf.js" defer></script>
+    <script src="js/ghost.js" defer></script>
+    <script src="js/map.js" defer></script>
+    <script src="js/controller.js" defer></script>
+</body>
+
+</html>

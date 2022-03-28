@@ -1,0 +1,103 @@
+.information {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.lives {
+    align-items: center;
+}
+
+.lives span {
+    margin-right: 10px;
+}
+
+.lives img {
+    margin: 2px;
+}
+
+.left {
+    align-items: center;
+    float: left;
+}
+
+.right {
+    align-items: center;
+    float: right;
+}
+
+.direction {
+    display: none;
+    position: absolute;
+    left: 35px;
+    height: 160px;
+    width: 165px;
+}
+
+.direction div {
+    width: 50px !important;
+}
+
+#up {
+    position: absolute;
+    left: 55px;
+    top: 0px;
+}
+
+#down {
+    position: absolute;
+    left: 55px;
+    bottom: -5px;
+}
+
+#left {
+    position: absolute;
+    left: 0px;
+    top: 47px;
+}
+
+#right {
+    position: absolute;
+    right: -20px;
+    top: 47px;
+}
+
+.extra {
+    display: none;
+    position: absolute;
+    right: 48px;
+    height: 160px;
+    width: 165px;
+}
+
+.extra div {
+    line-height: 140px;
+    height: 145px;
+    width: 165px;
+}
+
+@media only screen and (max-width: 768px) {
+    .extra,
+    .direction {
+        display: block;
+    }
+    .left {
+        position: absolute;
+        left: 270px;
+        bottom: 105px;
+        width: 35% !important;
+    }
+    .right {
+        position: absolute;
+        left: 270px;
+        bottom: 49px;
+        width: 35% !important;
+    }
+    .exit {
+        position: absolute;
+        left: 270px;
+        bottom: -7px;
+        width: 35% !important;
+    }
+}

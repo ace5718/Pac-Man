@@ -1,0 +1,32 @@
+.rank {
+    position: absolute;
+    left: 658px;
+    top: 162px;
+    background-color: black;
+}
+
+.list {
+    height: 180px;
+    margin: auto;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    border: 1px solid black;
+    color: white;
+}
+
+thead tr:nth-child(1) {
+    background-color: gray;
+}
+
+tbody tr:nth-child(1) {
+    background-color: red;
+}
+
+tbody tr {
+    background-color: orange;
+}

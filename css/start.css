@@ -1,0 +1,25 @@
+.start {
+    width: 600px;
+    height: 650px;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+.image {
+    margin-top: 50px;
+}
+
+.image img {
+    margin: 20px;
+}
+
+.start input {
+    width: 90%;
+    height: 50px;
+    margin: 20px;
+    font-size: 28px;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+}

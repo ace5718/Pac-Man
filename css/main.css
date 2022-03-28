@@ -1,0 +1,21 @@
+* {
+    text-align: center;
+    font-family: "微軟正黑體";
+    user-select: none;
+}
+
+body {
+    margin: 0px;
+    background-color: #aaa;
+    background-attachment: fixed;
+}
+
+.area {
+    display: flex;
+}
+
+.main {
+    width: 768px;
+    height: 100vh;
+    margin: auto;
+}

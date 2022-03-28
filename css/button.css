@@ -1,0 +1,73 @@
+.group {
+    width: 90%;
+    margin: auto;
+}
+
+.btn {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    line-height: 50px;
+    border: 2px solid orange;
+    background-color: white;
+    transition: 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: orangered;
+    opacity: 0;
+    transition: 0.3s;
+    transform: scale(0, 1);
+}
+
+.btn:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.btn:hover span {
+    color: white;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -75px;
+    display: block;
+    width: 100%;
+    height: 400vh;
+    background-color: white;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.btn:active::after {
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    width: 0%;
+    height: 0%;
+    opacity: 1;
+    transition: 0s;
+}
+
+.active {
+    background-color: yellow;
+}
